@@ -67,6 +67,11 @@ I've put a lot of thought into its contents.
                font-weight: 400;
                margin: 0px;
           }
+
+          /* The link to my Linkedin profile */
+          a{
+               color: black
+          }
           
           /* Any major section heading (ie. "Education" or "Work History") */
           h2 {
@@ -75,14 +80,14 @@ I've put a lot of thought into its contents.
                margin: 10px 0px 0px;
           }
           
-          /* sub-headings (ie. a project heading under "Projects",
+          /* Sub-headings (ie. a project heading under "Projects",
                a place of work under "Work history" */
           h3 {
                font-size: 11pt;
                margin: 3px 0px 0px;-weight: 600;
           }
 
-          /* plain-text beneath a sub-heading (ie. beneath an h3) */
+          /* Plain-text beneath a sub-heading (ie. beneath an h3) */
           p {
                font-size: 12pt;
                font-weight: 400;
@@ -122,7 +127,10 @@ I've put a lot of thought into its contents.
 
      <div>Moscow, ID, (208) 819-0219</div>
      <div>geoffreywood77@gmail.com</div>
-     <div>https://www.linkedin.com/in/geoffreywood77/</div>
+     <div>
+          <a href="https://www.linkedin.com/in/geoffreywood77/">
+               https://www.linkedin.com/in/geoffreywood77/</a>
+     </div>
 
      <hr><!-- I will include a line after every hr for readability ------------------------- -->
      
@@ -182,6 +190,16 @@ I've put a lot of thought into its contents.
      
      <hr><!-- ------------------------------------------------------------------------------ -->
 
+     <!--
+     The format in the next two sections inside the h3s with the three spans arose out of a
+     desire to have the dates in my resume be right-aligned. Several people suggested that those
+     dates should be more visible. I also felt that the bottom of the page needed more symmetry.
+     I used span tags to accomplish this because I wanted all the information to stay on one line
+     and I wanted to keep most of the h3 formating. I also have an aversion to typing the same
+     id X times when I could be using the nth-of-type selector and this document has a much more
+     repetitive and predictable format than the average web page.
+     -->
+
      <h2>Education:</h2>
      <h3>
           <span>The University of Idaho</span>,
@@ -221,7 +239,7 @@ I've put a lot of thought into its contents.
      <h3>
          <span>U of I Chemistry Store</span>,
          <span>Stock</span>
-         <span>August -  December 2015</span>
+         <span>August - December 2015</span>
      </h3>
     
      <h3>
@@ -233,7 +251,7 @@ I've put a lot of thought into its contents.
      <h3>
           <span>Boulder Beach Water Park</span>,
           <span>Lifeguard</span>
-          <span>May -  August 2013</span>
+          <span>May - August 2013</span>
      </h3>
 
      <hr><!-- ------------------------------------------------------------------------------ -->
