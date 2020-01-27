@@ -1,61 +1,117 @@
+<!--
+If you are seeing this, hello!
+I am so excited to show you this part of my resume,
+especially if you know what this is and you want to be here.
+------------------------------------------------------------------------------------------
+IF YOU ARE LOST:
+1. Don't panic.
+2. Please don't change anything (Ctrl+Z is your friend).
+3. This HTML file is intended to be viewed inside an internet browser like Google Chrome.
+   If you right-click the file, you should find the option to open it with your browser of
+   choice under "Open with".
+4. Please contact me with further issues at geoffreywood77@gmail.com;
+   it is very important to me that this is a user friendly document.
+------------------------------------------------------------------------------------------
+Now, potential employers' ability to see this code is one of the major reasons I wrote 
+my resume in HTML, so I have taken the time to explain some format choices both within this
+code and in its product.
+-->
+
 <!DOCTYPE html>
 <html>
+<!--
+because of the nature of this document, the head tag contains some uncommon information,
+I've put a lot of thought into its contents.
+-->
 <head>
-    <title>201910CFGeoffreyWoodResume+CSS</title>
-    <style>
+     
+     <!-- This meta tag was included to ensure format stability across web browsers. -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     
+     <!--
+     The title tag determines what is displayed on the web browser tab and the default
+     file name when one decides to save my resume as a PDF from the browser window.
+
+     I'm learning some javascript and I would like to make a title that auto updates
+     with the year and season.
+     -->
+     <title>2020GeoffreyWoodResume+CSS</title>
+     
+     <!--
+     I've used a style tag to add CSS to this document so that I don't need to send
+     a separate CSS file to an employer when they ask for my resume. I feel that it
+     is very important to avoid confusion with what I am sending.
+
+     The comments within the style tag provide some information about the target of
+     each of the selectors I use so that I know what I am changing when I polish
+     the format of my resume.
+     -->
+     <style>
+          /* Default format for the document */
           body {
                font-family: Georgia, Times, "Times New Roman", serif;
                margin: 20px auto 20px;
                width: 620px;
           }
           
+          /* My name */
           h1 {
                font-size: 24pt;
                font-weight: 500;
                margin: 0px;
           }
           
+          /* My contact information */
           div {
                font-size: 10.5pt;
                font-weight: 400;
                margin: 0px;
           }
           
+          /* Any major section heading (ie. "Education" or "Work History") */
           h2 {
                font-size: 18pt;
                font-weight: 200;
                margin: 10px 0px 0px;
           }
           
+          /* sub-headings (ie. a project heading under "Projects",
+               a place of work under "Work history" */
           h3 {
                font-size: 11pt;
                margin: 3px 0px 0px;-weight: 600;
           }
-          
-          h3 span:nth-of-type(2) {
-               font-weight: 400;
-               font-style: italic;
-          }
 
+          /* plain-text beneath a sub-heading (ie. beneath an h3) */
           p {
                font-size: 12pt;
                font-weight: 400;
                margin: 0px;
                margin-left: 2%;
           }
-          
-          li {
-               font-size: 12pt;
-               font-weight: 400;
-               margin: 0px 0px 0px -20px;
-          }
-          
+
+          /* Any block of bullet points */         
           ul {
                margin: 0px;
                margin-left: 2%;
           }
 
-          #date {
+          /* All individual bullet points */
+          li {
+               font-size: 12pt;
+               font-weight: 400;
+               margin: 0px 0px 0px -20px;
+          }
+
+          /* The job titles in the "Work History" section
+               and the locations in the "Education" section*/
+          h3 span:nth-of-type(2) {
+               font-weight: 400;
+               font-style: italic;
+          }
+
+          /* All of the dates*/
+          h3 span:nth-of-type(3) {
                float: right;
           }
      </style>
@@ -68,8 +124,8 @@
      <div>geoffreywood77@gmail.com</div>
      <div>https://www.linkedin.com/in/geoffreywood77/</div>
 
-     <hr>
-
+     <hr><!-- I will include a line after every hr for readability ------------------------- -->
+     
      <h2>Professional Summary:</h2>
      <ul>
           <li><strong>Mechanical Engineering graduate with relevant project experience</strong></li>
@@ -79,7 +135,7 @@
           <li>Obtained B.S.A. rank of Eagle Scout</li>
      </ul>
 
-     <hr>
+     <hr><!-- ------------------------------------------------------------------------------ -->
     
      <h2>Relevant Skills and Proficiencies:</h2>
      <ul>
@@ -93,7 +149,7 @@
           <li>CATIA (passed 400 level class)</li>
      </ul>
      
-     <hr>
+     <hr><!-- ------------------------------------------------------------------------------ -->
 
      <h2>Recent Project Experience:</h2>
      <h3>Mechanical Systems Design 1&2 - Capstone Project</h3>
@@ -124,59 +180,63 @@
           to sort data, build wind rose plots and analyze probability of wind patterns.
      </p>
      
-     <hr>
+     <hr><!-- ------------------------------------------------------------------------------ -->
 
      <h2>Education:</h2>
-     <h3>The University of Idaho, Moscow ID <span id=date>August 2015 - May 2019</span></h3>
+     <h3>
+          <span>The University of Idaho</span>,
+          <span>Moscow ID</span>
+          <span>August 2015 - May 2019</span>
+     </h3>
      <p>Bachelor of Science in Mechanical Engineering, GPA: 3.35</p>
 
-     <hr>
+     <hr><!-- ------------------------------------------------------------------------------ -->
 
      <h2>Work History:</h2>
 
      <h3>
           <span>Moscow Food Co-op</span>,
           <span>Cook</span>
-          <span id=date>January - Present 2020</span>
+          <span>January - Present 2020</span>
      </h3>
 
      <h3>
           <span>Moscow Food Co-op</span>,
           <span>Dishwasher</span>
-          <span id=date>August 2019 - January 2020</span>
+          <span>August 2019 - January 2020</span>
      </h3>
 
      <h3>
           <span>C&R Inc.</span>,
           <span>Caregiver</span>
-          <span id=date>June - August 2017 & 2018</span>
+          <span>June - August 2017 & 2018</span>
      </h3>
 
      <h3>
          <span>Stine's IGA</span>,
          <span>Checker&Stock</span>
-         <span id=date>June - August 2016</span>
+         <span>June - August 2016</span>
      </h3>
 
      <h3>
          <span>U of I Chemistry Store</span>,
          <span>Stock</span>
-         <span id=date>August -  December 2015</span>
+         <span>August -  December 2015</span>
      </h3>
     
      <h3>
           <span>Silverwood Theme Park</span>,
           <span>Busser&Dishwasher</span>
-          <span id=date>June - August 2014 & 2015</span>
+          <span>June - August 2014 & 2015</span>
      </h3>
 
      <h3>
           <span>Boulder Beach Water Park</span>,
           <span>Lifeguard</span>
-          <span id=date>May -  August 2013</span>
+          <span>May -  August 2013</span>
      </h3>
 
-     <hr>
+     <hr><!-- ------------------------------------------------------------------------------ -->
 
 </body>
 </html>
