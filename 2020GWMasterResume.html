@@ -35,7 +35,7 @@ I've put a lot of thought into its contents.
      I'm learning some javascript and I would like to make a title that auto updates
      with the year and season.
      -->
-     <title>2020GeoffreyWoodResume+CSS</title>
+     <title>2020GeoffreyWoodResume</title>
      
      <!--
      I've used a style tag to add CSS to this document so that I don't need to send
@@ -109,20 +109,40 @@ I've put a lot of thought into its contents.
           }
 
           /* The job titles in the "Work History" section
-               and the locations in the "Education" section*/
+               and the locations in the "Education" section */
           h3 span:nth-of-type(2) {
                font-weight: 400;
                font-style: italic;
           }
 
-          /* All of the dates*/
+          /* All of the dates */
           h3 span:nth-of-type(3) {
                float: right;
           }
+
+          /* This is the ID referenced in the jQuery code used to mark the parts of
+               my resume that I would like to sort out via Python with Beautiful Soup.
+               It is an artifact of that process and should have no effect on the code
+               you see */
+          .exclude{
+               color: lightgrey;
+               text-decoration: line-through;
+          }
      </style>
 </head>
+
+<!--
+I'm adding the jQuery library to the master file altho the script tag will be filtered out
+of what you see. It will help me to change my master resume into the one you see.
+I like jQuery for this application because:
+     1) As I said, I intend to filter the script tags out of the final product that will be
+          delivered to a prospective employer so it won't cause any bloating on that file.
+     2) jQuery is much more intuitive and user friendly than vanilla Javascript for me.
+     3) The small difference in performance is negligible in this case.
+-->
+<script type= "text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
 <body>
-     
      <h1>Geoffrey Wood</h1>
 
      <div>Moscow, ID, (208) 819-0219</div>
@@ -160,6 +180,8 @@ I've put a lot of thought into its contents.
      <hr><!-- ------------------------------------------------------------------------------ -->
 
      <h2>Recent Project Experience:</h2>
+     
+     <span>
      <h3>Mechanical Systems Design 1&2 - Capstone Project</h3>
      <p>
           With a team of three others, designed and built a precise mechanical system for
@@ -167,13 +189,17 @@ I've put a lot of thought into its contents.
           CCI/Speer manufacturing plant in Lewiston Idaho. Worked extensively with
           Excel, MATLAB and LabVIEW for simulation, data collection, and data analysis.
      </p>
-     
+     </span>
+          
+     <span>
      <h3>Thermal Energy Systems Design - Fishery Water Saving Project</h3>
      <p>
           Used Python and Git to simulate and design a piping system to pump
           water from a fishery on the U of I campus to the campus cooling tower.
      </p>
+     </span>
 
+     <span>
      <h3>Advanced Computer Aided Design - CATIA Lego project</h3>
      <p>
          Built a lego engine model by first creating CATIA lego parts and
@@ -181,12 +207,15 @@ I've put a lot of thought into its contents.
          This project included animation of the engine being assembled and
          rendering of the completed assembly.
      </p>
+     </span>
 
+     <span>
      <h3>Senior Lab - Scientific Process Project</h3>
      <p>
           Measured wind speed and direction with a sonic anemometer and used MATLAB
           to sort data, build wind rose plots and analyze probability of wind patterns.
      </p>
+     </span>
      
      <hr><!-- ------------------------------------------------------------------------------ -->
 
@@ -257,6 +286,20 @@ I've put a lot of thought into its contents.
      <hr><!-- ------------------------------------------------------------------------------ -->
 
 </body>
+
+<!--
+The following jQuery code allows me to add the class "exclude" to specific elements by clicking
+on them in the "webpage" that is built by this file, changing their appearance, and providing a
+simple means of sorting those elements out with Python's Beautiful Soup library That is
+implemented in the "Backend" of this application.
+-->
+
+<script>
+     $("li, span:not(h3 span)").click(function(){
+          $(this).toggleClass("exclude")} 
+     );
+</script>
+
 </html>
 
 
